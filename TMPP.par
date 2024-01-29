@@ -1,0 +1,117 @@
+BONDS
+!V(bond) = Kb(b - b0)**2
+!
+!Kb: kcal/mole/A**2
+!b0: A
+!
+!atom type Kb b0
+!
+NN1T  CAT   400.000    1.400    
+NN1T  HN1T  465.000    1.030    
+CAT   NC2T  365.000    1.330    
+CAT   CAT   340.000    1.380    
+CAT   HPT   380.000    1.080    
+CAT   CT2T  320.000    1.500    
+CT2T  HAT   365.000    1.100    
+CAT   OST   400.000    1.340    
+OST   CT3T  335.000    1.400    
+CT3T  HAT   355.000    1.090
+NC2T  HN2   471.000    1.010
+OST   HOM   475.000    0.970    
+    
+
+ANGLES
+!
+!V(angle) = Ktheta(Theta - Theta0)**2
+!
+!V(Urey-Bradley) = Kub(S - S0)**2
+!
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!Kub: kcal/mole/A**2 (Urey-Bradley)
+!S0: A
+!
+!atom types     Ktheta    Theta0   Kub     S0
+!
+!
+NC2T  CAT   CAT   56.000    123.000     
+CAT   CAT   CAT   60.000    120.000     
+NC2T  CAT   NC2T  96.000    128.000     
+NN1T  CAT   NC2T  82.500    116.000     
+NN1T  CAT   CAT   101.000   122.000     
+OST   CAT   CAT   82.500    120.000     
+HN1T  NN1T  CAT   87.500    113.000     
+HN1T  NN1T  HN1T  90.000    115.000     
+CAT   NC2T  CAT   95.000    115.000     
+NC2T  CAT   HPT   89.000    115.500     
+HPT   CAT   CAT   48.000    120.000     
+CAT   CAT   CT2T  86.000    120.000     
+CAT   CT2T  CAT   145.000   111.000     
+CAT   CT2T  HAT   71.000    111.000     
+HAT   CT2T  HAT   64.000    105.000     
+CAT   OST   CT3T  129.000   112.000     
+OST   CT3T  HAT   77.000    108.500     
+HAT   CT3T  HAT   48.000    108.000
+CAT   NC2T  HN2   45.000    115.600
+CAT   OST   HOM   95.000    105.500     
+     
+
+DIHEDRALS
+!
+!V(dihedral) = Kchi(1 + cos(n(chi) - delta))
+!
+!Kchi: kcal/mole
+!n: multiplicity
+!delta: degrees
+!
+!atom types             Kchi    n   delta
+!
+CAT   CAT   CT2T  HAT   0.0000   3  0.0000 
+HPT   CAT   CAT   CT2T  0.0000   1  0.0000   
+CAT   OST   CT3T  HAT   0.0000   3  0.0000   
+NN1T  CAT   CAT   CAT   0.0000   2  180.00  
+HPT   CAT   CAT   OST   4.2000   2  180.00  
+HPT   CAT   CAT   CAT   0.0000   1  0.0000   
+OST   CAT   CAT   OST   0.0000   1  0.0000   
+CAT   CAT   NN1T  HN1T  0.0000   1  0.0000  
+CAT   CAT   CAT   CAT   1.9000   2  180.00  
+CAT   CAT   CT2T  CAT   1.6500   3  180.00  
+CT2T  CAT   CAT   CAT   2.9000   2  180.00  
+NC2T  CAT   NC2T  CAT   2.8000   2  180.00  
+NC2T  CAT   CAT   CAT   3.0000   2  180.00  
+NN1T  CAT   NC2T  CAT   2.9000   2  180.00  
+CAT   NC2T  CAT   HPT   2.9000   2  180.00  
+HN1T  NN1T  CAT   NC2T  0.5000   3  0.0000  
+CAT   CAT   OST   CT3T  1.8500   2  180.00  
+NC2T  CAT   CAT   CT2T  3.0000   2  180.00  
+OST   CAT   CAT   CAT   2.9000   2  180.00  
+NN1T  CAT   CAT   CT2T  3.0000   2  180.00  
+CAT   NC2T  CAT   CAT   2.9000   2  180.00 
+NN1T  CAT   NC2T  HN2   1.2000   2  180.00   
+NC2T  CAT   NC2T  HN2   0.0000   2  180.00 
+HN2   NC2T  CAT   HPT   2.5000   1  -60.00  
+HN2   NC2T  CAT   CAT   2.5000   2  180.00 
+
+
+NONBONDED nbxmod  5 atom cdiel shift vatom vdistance vswitch -
+cutnb 14.0 ctofnb 12.0 ctonnb 10.0 eps 1.0 e14fac 1.0 wmin 1.5 
+!
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!
+!epsilon: kcal/mole, Eps,i,j = sqrt(eps,i * eps,j)
+!Rmin/2: A, Rmin,i,j = Rmin/2,i + Rmin/2,j
+!
+!atom  ignored    epsilon      Rmin/2   ignored   eps,1-4       Rmin/2,1-4
+!
+CAT   0.0  -0.070000  1.992400      
+CT2T  0.0  -0.055000  2.175000  0.0  -0.010000  1.900000  
+CT3T  0.0  -0.080000  2.060000  0.0  -0.010000  1.900000  
+HAT   0.0  -0.022000  1.320000      
+HN1T  0.0  -0.046000  0.224500      
+HPT   0.0  -0.030000  1.358200  0.0  -0.030000  1.358200  
+NC2T  0.0  -0.200000  1.850000      
+NN1T  0.0  -0.200000  1.850000      
+OST   0.0  -0.152100  1.770000      
+
+
+

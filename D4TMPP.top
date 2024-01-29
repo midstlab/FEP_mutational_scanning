@@ -1,0 +1,49 @@
+RESI  D4PP     1.00
+GROUP
+ATOM  NA2 NN1T   -0.671000  !         HA41  HA42
+ATOM HA21 HN1T    0.499000  !           \   /    
+ATOM HA22 HN1T    0.499000  !            NA4        H2P        H81
+ATOM   C2 CAT    -0.166000  !             |          |          | 
+ATOM   N3 NC2T   -0.544000  !            C4   C7    C2P     O3P-C8-H81
+ATOM   N1 NC2T   -0.643000  !           / \\ /  \  /  \\   /    |   
+ATOM   C6 CAT     0.501000  !          N3  C5    C1P   C3P    H81
+ATOM   H6 HPT     0.090000  !          ||   |    ||    |
+ATOM   C4 CAT     0.417000  !   HA21   C2   C6   C6P  C4P   
+ATOM  NA4 NN1T   -0.622000  !    \   / \  //      \  // \     
+ATOM HA41 HN1T    0.399000  !     NA2   N1         C5P  O4P
+ATOM HA42 HN1T    0.399000  !    /      |          /      \       
+ATOM   C5 CAT     0.163000  ! HA22      H11     O5P        H4P        
+ATOM   C7 CT2T   -0.575000  !                   |
+ATOM  H71 HAT     0.090000  !             H101-C10-H102
+ATOM  H72 HAT     0.090000  !                   |
+ATOM  C1P CAT    -0.410000  !                 H103
+ATOM  C2P CAT     0.534000  !
+ATOM  H2P HPT     0.090000  !
+ATOM  C3P CAT     0.290000  !
+ATOM  O3P OST    -0.506000  !
+ATOM   C8 CT3T   -0.601000  !
+ATOM  H81 HAT     0.090000  !
+ATOM  H82 HAT     0.090000  !
+ATOM  H83 HAT     0.090000  !
+ATOM  C4P CAT     0.284000  !
+ATOM  O4P OST    -0.629000  !
+ATOM  H4P HOM     0.131000  !
+ATOM  C5P CAT     0.290000  !
+ATOM  O5P OST    -0.506000  !
+ATOM  C10 CT3T   -0.601000  !
+ATOM H101 HAT     0.090000  !
+ATOM H102 HAT     0.090000  !
+ATOM H103 HAT     0.090000  !
+ATOM  C6P CAT     0.534000  !
+ATOM  H6P HPT     0.090000  !
+ATOM  H11 HN2     0.544000
+BOND NA2 HA21  NA2 C2  NA2 HA22  
+BOND C2 N1  C2 N3  N3 C4  N1 C6  
+BOND N1 H11  C6 H6  C6 C5  C4 NA4  
+BOND C4 C5  NA4 HA41  NA4 HA42  C5 C7  
+BOND C7 H71  C7 C1P  C7 H72  C1P C2P  
+BOND C1P C6P  C2P H2P  C2P C3P  C3P C4P  
+BOND C3P O3P  O3P C8  C8 H82  C8 H83  
+BOND C8 H81  C4P C5P  C4P O4P  O4P H4P  
+BOND C5P C6P  C5P O5P  O5P C10  C10 H101  
+BOND C10 H103  C10 H102  C6P H6P
